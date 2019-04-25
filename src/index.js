@@ -4,7 +4,10 @@
  Задача 1:
  Напишите аналог встроенного метода forEach для работы с массивами
  */
-function forEach(array, fn) {
+function forEach(array, fn, thisArg) {
+  for (let i = 0; i < array.length; i++) {
+    fn.call(thisArg, array[i], i, array);
+  }
 }
 
 /*
