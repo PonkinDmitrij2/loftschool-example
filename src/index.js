@@ -74,6 +74,7 @@ function getEnumProps(obj) {
  Функция должна перебрать все свойства объекта, преобразовать их имена в верхний регистра и вернуть в виде массива
  */
 function upperProps(obj) {
+  return Object.keys(obj).map((key) => key.toUpperCase());
 }
 
 /*
