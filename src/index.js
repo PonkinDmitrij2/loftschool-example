@@ -14,7 +14,14 @@ function forEach(array, fn, thisArg) {
  Задача 2:
  Напишите аналог встроенного метода map для работы с массивами
  */
-function map(array, fn) {
+function map(array, fn, thisArg) {
+  const result = [];
+
+  for (let i = 0; i < array.length; i++) {
+    result.push(fn.call(thisArg, array[i], i, array));
+  }
+
+  return result;
 }
 
 /*
